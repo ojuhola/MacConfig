@@ -1,6 +1,6 @@
 My Mac specific configuration files
 
---- Commands ---
+--- Commands ---  
 mv ~/.zshrc .zshrc.old  
 ln -s .zshrc ~/.zshrc  
 --- Commands ---
