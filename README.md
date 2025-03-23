@@ -5,4 +5,4 @@ mv ~/.zshrc .zshrc.old
 ln -s .zshrc ~/.zshrc
 --- Commands ---
 
-op 19.03.2025
+--op 19.03.2025
