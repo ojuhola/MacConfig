@@ -31,6 +31,8 @@ if type -q eza
     alias lt="eza -la --icons --no-user  --color=always --group-directories-first -T -D --git-ignoreD "
 end
 
+alias update="brew update && brew upgrade"
+
 fastfetch
 
 
