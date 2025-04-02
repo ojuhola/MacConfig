@@ -8,26 +8,22 @@ end
 # 2.04.2025 OP
 ####################################################################################
 
-# Suppresses the default fish prompt
+# Suppresses the default fish greeting
 set fish_greeting
 
-# reload fish config
+# Function for reloading fish config
 function reload
     exec fish
     set -l config (status -f)
     echo "reloading: $config"
 end
 
-# Prompt for verification before executing commands
-alias rm="rm -i"
-alias mv="mv -i"
-
 # Starship prompt initialization
 if command -sq starship
     starship init fish | source
 end
 
-# eza for directory listings
+# Replace ls-command with eza for directory listings
 if type -q eza
     alias l="eza -1 --icons --no-user --color=always --group-directories-first --git-ignore"
     alias ls="eza -l --icons --no-user --color=always --group-directories-first --git-ignore"
@@ -35,8 +31,14 @@ if type -q eza
     alias lt="eza -la --icons --no-user  --color=always --group-directories-first -T -D --git-ignoreD "
 end
 
-# Brew update and upgrade command
+# Prompt for verification before executing commands
+alias rm="rm -i"
+alias mv="mv -i"
+
+# Additional aliases
 alias update="brew update && brew upgrade"
+alias hh="history | tail -n 200"
+alias grep="grep --color=auto"
 
 # Decorations at the beginning of the terminal
 fastfetch
