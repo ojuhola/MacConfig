@@ -39,8 +39,10 @@ alias mv="mv -i"
 alias update="brew update && brew upgrade"
 alias hh="history | tail -n 200"
 alias grep="grep --color=auto"
+alias ip="ip -color"
 
 # Decorations at the beginning of the terminal
+echo -e "\n"
 fastfetch
 
 
