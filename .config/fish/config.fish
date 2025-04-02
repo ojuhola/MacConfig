@@ -5,6 +5,7 @@ end
 ##########################
 # My custom commands
 #
+# 2.04.2025 OP
 
 # Suppresses the default fish prompt
 set fish_greeting
