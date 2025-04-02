@@ -25,7 +25,7 @@ $character"""
 symbol = " "
 
 [username]
-format = " [$user](blue)@"
+format = " [$user](blue)@"
 # format = " [$user](blue)@"
 # format = " [$user](blue)@"
 # format = " [$user](blue)@"

@@ -111,7 +111,7 @@ source $ZSH/oh-my-zsh.sh
 
 alias ls="eza"
 alias l="ls -l --color=always --no-user"
-alias ll="ls -laH --color=always --no-user"
+alias ll="ls -la --color=always --no-user"
 
 eval "$(starship init zsh)"
 eval $(thefuck --alias)
