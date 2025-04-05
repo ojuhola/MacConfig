@@ -9,9 +9,9 @@ end
 ####################################################################################
 
 # Suppresses the default fish greeting
-set fish_greeting
+set  -g fish_greeting
 
-# Function for reloading fish config
+# Function for reloading fish config when needed
 function reload
     exec fish
     set -l config (status -f)
@@ -36,7 +36,7 @@ alias rm="rm -i"
 alias mv="mv -i"
 
 # Additional aliases
-alias update="brew update && brew upgrade"
+alias update="brew update && brew upgrade && brew cleanup"
 alias hh="history | tail -n 200"
 alias grep="grep --color=auto"
 alias ip="ip -color"
