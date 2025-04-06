@@ -8,7 +8,7 @@ end
 # 2.04.2025 OP
 ####################################################################################
 
-# Suppresses the default fish greeting
+# Suppress the default fish greeting
 set  -g fish_greeting
 
 # Function for reloading fish config when needed
@@ -41,7 +41,7 @@ alias hh="history | tail -n 200"
 alias grep="grep --color=auto"
 alias ip="ip -color"
 
-# Decorations at the beginning of the terminal
+# Decorations at the beginning of the terminal session
 echo -e "\n"
 fastfetch
 
