@@ -1,15 +1,13 @@
-if not status --is-interactive
-    exit
-end
-
 ####################################################################################
 # My custom fish shell configurations
 #
-# 2.04.2025 OP
+# 02.04.2025 OP
 ####################################################################################
 
-# Suppress the default fish greeting
-set  -g fish_greeting
+# Check if fish is running interactively
+if not status --is-interactive
+    exit
+end
 
 # Function for reloading fish config when needed
 function reload
@@ -27,7 +25,7 @@ if type -q eza
 end
 
 # Additional aliases
-alias update="brew update --quiet && brew upgrade && brew cleanup"
+alias update="brew update --quiet && brew upgrade && brew cleanup && echo '==> Done'"
 alias hh="history | tail -n 200"
 alias grep="grep --color=auto"
 alias ip="ip -color"
@@ -37,6 +35,9 @@ alias mv="mv -i"
 alias cp="cp -i"
 alias rmdir="rmdir -i"
 alias mkdir="mkdir -p"
+
+# Suppress the default fish greeting
+set -g fish_greeting
 
 # Starship prompt initialization
 if command -sq starship
