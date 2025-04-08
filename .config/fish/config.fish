@@ -18,11 +18,6 @@ function reload
     echo "reloading: $config"
 end
 
-# Starship prompt initialization
-if command -sq starship
-    starship init fish | source
-end
-
 # Replace ls-command with eza for directory listings
 if type -q eza
     alias l="eza -1 --icons --no-user --color=always --group-directories-first --git-ignore"
@@ -31,18 +26,23 @@ if type -q eza
     alias lt="eza -la --icons --no-user  --color=always --group-directories-first -T -D --git-ignoreD "
 end
 
-# Prompt for verification before executing commands
-alias rm="rm -i"
-alias mv="mv -i"
-
 # Additional aliases
-alias update="brew update && brew upgrade && brew cleanup"
+alias update="brew update --quiet && brew upgrade && brew cleanup"
 alias hh="history | tail -n 200"
 alias grep="grep --color=auto"
 alias ip="ip -color"
+alias ping="ping -c 5"
+alias rm="rm -i"
+alias mv="mv -i"
+alias cp="cp -i"
+alias rmdir="rmdir -i"
+alias mkdir="mkdir -p"
+
+# Starship prompt initialization
+if command -sq starship
+    starship init fish | source
+end
 
 # Decorations at the beginning of the terminal session
 echo -e "\n"
 fastfetch
-
-
