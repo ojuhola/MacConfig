@@ -1,4 +1,5 @@
 ####################################################################################
+# config.fish
 # My custom fish shell configurations
 #
 # 02.04.2025 OP
@@ -21,14 +22,13 @@ if type -q eza
     alias l="eza -1 --icons --no-user --color=always --group-directories-first --git-ignore"
     alias ls="eza -l --icons --no-user --color=always --group-directories-first --git-ignore"
     alias ll="eza -la --icons --no-user --color=always --group-directories-first --git-ignore --time-style='+%d.%m.%y %H:%M'"
-    alias lt="eza -la --icons --no-user  --color=always --group-directories-first -T -D --git-ignoreD "
+    alias lt="eza -la --icons --no-user  --color=always --group-directories-first -T -D --git-ignore"
 end
 
 # Additional aliases
 alias update="brew update --quiet && brew upgrade && brew cleanup && echo '==> Done'"
 alias hh="history | tail -n 200"
 alias grep="grep --color=auto"
-alias ip="ip -color"
 alias ping="ping -c 5"
 alias rm="rm -i"
 alias mv="mv -i"

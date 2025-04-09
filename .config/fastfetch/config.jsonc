@@ -4,7 +4,7 @@
         "type": "auto"
     },
     "display": {
-        "key": { "Width": 11 },
+        "key": { "width": 11 },
         "bar": {
             "charElapsed": "=",
             "charTotal": "-",
@@ -14,7 +14,7 @@
     "modules": [
         "title",
         "separator",
-        "OS",
+        "os",
         "kernel",
         "shell",
         "packages",
