@@ -30,11 +30,13 @@ alias update="brew update --quiet && brew upgrade && brew cleanup && echo '==> D
 alias hh="history | tail -n 200"
 alias grep="grep --color=auto"
 alias ping="ping -c 5"
+alias mkdir="mkdir -p"
+
+# Aliases for file operations with confirmation
 alias rm="rm -i"
 alias mv="mv -i"
 alias cp="cp -i"
 alias rmdir="rmdir -i"
-alias mkdir="mkdir -p"
 
 # Suppress the default fish greeting
 set -g fish_greeting
