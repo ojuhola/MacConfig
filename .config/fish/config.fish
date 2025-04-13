@@ -27,7 +27,6 @@ end
 
 # Additional aliases
 alias update="brew update && brew upgrade && brew cleanup && echo '==> Done'"
-alias hh="history | fzf --height 40% --reverse --inline-info --preview 'echo {} | cut -d \" \" -f 2- | head -n 20'"
 alias cat="bat --style=plain --color=always"
 alias grep="grep --color=auto"
 alias ping="ping -c 5"
