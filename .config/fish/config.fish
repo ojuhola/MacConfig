@@ -25,7 +25,7 @@ if type -q eza
     alias lt="eza -la --icons --no-user  --color=always --group-directories-first -T -D --git-ignore"
 end
 
-# Additional aliases
+# Aliases for common commands
 alias update="brew update && brew upgrade && brew cleanup && echo '==> Done'"
 alias cat="bat --style=plain --color=always"
 alias grep="grep --color=auto"
