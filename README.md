@@ -19,4 +19,4 @@ ln -s .config/fastfetch/config.jsonc ~/.config/fastfetch/config.jsonc
 ## Configuration - directory
 Exported configuration files
 
---op 19.03.2025
+<em>--op 19.03.2025</em>
