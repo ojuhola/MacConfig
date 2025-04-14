@@ -1,10 +1,11 @@
 # My Mac specific configuration files
 
 ## .config - directory
-Config files for fastfetch, fish, fzf, eza, starship in their respected locations
+Config files for bat, fastfetch, fish, fzf, eza, starship in their respected locations
 
 ### Commands
 ```bash
+brew install bat
 brew install fastfetch
 brew install fish
 brew install fzf
