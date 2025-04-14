@@ -4,7 +4,6 @@
 Config files for fastfetch, fish, fzf, eza, starship in their respected locations
 
 ### Commands
-
 ```bash
 brew install fastfetch
 brew install fish
