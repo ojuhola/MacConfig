@@ -18,5 +18,6 @@ ln -s .config/fastfetch/config.jsonc ~/.config/fastfetch/config.jsonc
 
 ## Exports - directory
 Exported configuration files, like iTerm2-configuration 
-
-<em>--op 19.03.2025</em>
+<em>
+--op 19.03.2025
+</em>
