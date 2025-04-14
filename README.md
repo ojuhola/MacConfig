@@ -4,8 +4,8 @@
 Config files for fastfetch, fish, fzf, eza, starship
 
 ### Commands
-----
-```
+
+```bash
 brew install fastfetch
 brew install fish
 brew install fzf
@@ -15,7 +15,6 @@ ln -s .config/fish/config.fish ~/.config/fish/config.fish
 ln -s .config/starship.toml ~/.config/starship.toml
 ln -s .config/fastfetch/config.jsonc ~/.config/fastfetch/config.jsonc
 ```
----
 
 ## Configuration - directory
 Exported configuration files
