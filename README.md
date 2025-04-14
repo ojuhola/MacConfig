@@ -1,7 +1,7 @@
 # My Mac specific configuration files
 
 ## .config - directory
-Config files for fastfetch, fish, fzf, eza, starship
+Config files for fastfetch, fish, fzf, eza, starship in their respected locations
 
 ### Commands
 
@@ -16,7 +16,7 @@ ln -s .config/starship.toml ~/.config/starship.toml
 ln -s .config/fastfetch/config.jsonc ~/.config/fastfetch/config.jsonc
 ```
 
-## Configuration - directory
-Exported configuration files
+## Exports - directory
+Exported configuration files, like iTerm2-configuration 
 
 <em>--op 19.03.2025</em>
