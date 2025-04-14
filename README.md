@@ -1,4 +1,4 @@
-My Mac specific configuration files
+##My Mac specific configuration files
 
 --- Commands ---  
 ln -s .config/fish/config.fish ~/.config/fish/config.fish
