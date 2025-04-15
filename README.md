@@ -10,7 +10,10 @@ brew install eza
 brew install fastfetch
 brew install fish
 brew install fzf
-brew install starship 
+brew install iterm2
+brew install starship
+brew install visual-studio-code
+brew install font-meslo-lg-nerd-font 
 ln -s .config/fish/config.fish ~/.config/fish/config.fish
 ln -s .config/starship.toml ~/.config/starship.toml
 ln -s .config/fastfetch/config.jsonc ~/.config/fastfetch/config.jsonc
