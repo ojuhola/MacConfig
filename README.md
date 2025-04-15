@@ -1,15 +1,15 @@
 # My Mac specific configuration files
 
 ## .config - directory
-Config files for bat, fastfetch, fish, fzf, eza, starship in their respected locations
+Config files for bat, eza, fastfetch, fish, fzf, starship in their respected locations
 
 ### Commands
 ```bash
 brew install bat
+brew install eza
 brew install fastfetch
 brew install fish
 brew install fzf
-brew install eza
 brew install starship 
 ln -s .config/fish/config.fish ~/.config/fish/config.fish
 ln -s .config/starship.toml ~/.config/starship.toml
