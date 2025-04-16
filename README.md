@@ -3,6 +3,9 @@
 ## .config - directory
 Config files for bat, eza, fastfetch, fish, fzf, starship in their respected locations
 
+## exports - directory
+Exported configuration files, like iTerm2-configuration 
+
 ### Commands
 ```bash
 brew install bat
@@ -13,14 +16,11 @@ brew install fzf
 brew install iterm2
 brew install starship
 brew install visual-studio-code
-brew install font-meslo-lg-nerd-font 
+brew install font-meslo-lg-nerd-font
 ln -s .config/fish/config.fish ~/.config/fish/config.fish
 ln -s .config/starship.toml ~/.config/starship.toml
 ln -s .config/fastfetch/config.jsonc ~/.config/fastfetch/config.jsonc
 ```
-
-## Exports - directory
-Exported configuration files, like iTerm2-configuration 
 
 <em>
 --op 19.03.2025
