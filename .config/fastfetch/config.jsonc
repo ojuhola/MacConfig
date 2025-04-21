@@ -17,15 +17,16 @@
         "os",
         "kernel",
         "shell",
+        "uptime",
         "packages",
         "lm",
         "de",
         "wm",
-	"memory",
+	    "memory",
         "disk",
         {
             "type": "colors",
-            "paddingLeft": 11,
+            "paddingLeft": 10,
             "symbol": "circle"
         }
     ]
