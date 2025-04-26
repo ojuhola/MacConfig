@@ -26,7 +26,7 @@ if type -q eza
 end
 
 # Aliases for common commands
-alias update="brew update --quiet && brew upgrade --quiet && brew cleanup --quiet && echo '==> Done'"
+alias update="brew update --quiet && brew upgrade --greedy --quiet && brew cleanup --quiet && echo -e '==> Done'"
 alias cat="bat --style=plain --color=always"
 alias grep="grep --color=auto"
 alias ping="ping -c 5"
