@@ -146,7 +146,7 @@ tag_disabled = false
 disabled = false
 
 [git_status]
-style = "fg:color_git"
+style = "fg:cyan"
 format = '([$ahead_behind]($style) )([$all_status]($style) )'
 stashed = "*${count}"
 ahead = "⇡${count}"
@@ -163,14 +163,14 @@ ignore_submodules = false
 disabled = false
 
 [git_metrics]
-format = '([([+$added]($added_style))([-$deleted]($deleted_style))](fg:color_git) )'
+format = '([([+$added]($added_style))([-$deleted]($deleted_style))](fg:cyan) )'
 added_style = "fg:green"
 deleted_style = "fg:red"
 only_nonzero_diffs = true
 disabled = false
 
 [git_state]
-style = "fg:color_danger"
+style = "fg:bold red"
 format = '([$state( $progress_current/$progress_total)]($style bold) )'
 rebase = "REBASING"
 merge = "MERGING"
@@ -231,11 +231,6 @@ symbol = " "
 
 [gcloud]
 symbol = "  "
-
-[git_branch]
-symbol = " "
-
-
 
 [golang]
 symbol = " "
