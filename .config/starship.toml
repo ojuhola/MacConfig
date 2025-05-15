@@ -75,7 +75,6 @@ $nix_shell\
 $conda\
 $meson\
 $spack\
-$memory_usage\
 $aws\
 $gcloud\
 $openstack\
@@ -86,14 +85,11 @@ $env_var\
 $mise\
 $crystal\
 $custom\
-$sudo\
-$jobs\
-$battery\
-$time\
 $status\
 $container\
 $netns\
 $shell\
+$time\
 $line_break\
 $character"""
 
@@ -141,7 +137,7 @@ disabled = false
 format = '($all_status $ahead_behind)'
 
 [battery]
-disabled = false
+disabled = true
 
 [aws]
 symbol = "  "
