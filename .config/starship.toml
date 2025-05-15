@@ -119,16 +119,17 @@ error_symbol = "[➜](bold red)"
 [directory]
 read_only = " 🔒"
 read_only_style = "white"
-truncation_length = 3
+truncation_length = 5
 truncation_symbol = "../"
 truncate_to_repo = true
 
 [directory.substitutions]
+"Desktop" = " "
 "Documents" = "󰈙 "
 "Downloads" = " "
 "Music" = "󰝚 "
 "Pictures" = " "
-"Videos" = "󰲋 "
+"Movies" = " "
 
 [cmd_duration]
 min_time = 1000
