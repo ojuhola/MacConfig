@@ -135,7 +135,7 @@ time_format = "%H:%M:%S"
 
 [cmd_duration]
 min_time = 1000
-# format = " [$duration]($style) "
+#format = " [$duration]($style) "
 
 [git_commit]
 format = "( [($tag)(@$hash)]($style) )"
