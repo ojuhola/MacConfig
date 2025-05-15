@@ -1,3 +1,5 @@
+"$schema" = 'https://starship.rs/config-schema.json'
+
 # starship.toml
 # My custom starship prompt configration
 # OP 24.05.2019
