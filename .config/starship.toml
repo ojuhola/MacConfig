@@ -9,9 +9,10 @@ $username\
 $hostname\
 $directory\
 $git_branch\
-$git_state\
+$git_commit\
 $git_status\
 $git_metrics\
+$git_state\
 $localip\
 $shlvl\
 $singularity\
@@ -161,6 +162,24 @@ untracked = "?${count}"
 ignore_submodules = false
 disabled = false
 
+[git_metrics]
+format = '([([+$added]($added_style))([-$deleted]($deleted_style))](fg:color_git) )'
+added_style = "fg:color_git_added"
+deleted_style = "fg:color_git_deleted"
+only_nonzero_diffs = true
+disabled = false
+
+[git_state]
+style = "fg:color_danger"
+format = '([$state( $progress_current/$progress_total)]($style bold) )'
+rebase = "REBASING"
+merge = "MERGING"
+revert = "REVERTING"
+cherry_pick = "CHERRY-PICKING"
+bisect = "BISECTING"
+am = "AM"
+am_or_rebase = "AM/REBASE"
+disabled = false
 
 [battery]
 disabled = true
