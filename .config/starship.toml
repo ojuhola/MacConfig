@@ -1,8 +1,9 @@
-"$schema" = 'https://starship.rs/config-schema.json'
-
 # starship.toml
 # My custom starship prompt configration
 # OP 24.05.2019
+
+# Get editor completions based on the config schema
+"$schema" = 'https://starship.rs/config-schema.json'
 
 # Two lines prompt 
 format = """
