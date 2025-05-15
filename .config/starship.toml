@@ -164,8 +164,8 @@ disabled = false
 
 [git_metrics]
 format = '([([+$added]($added_style))([-$deleted]($deleted_style))](fg:color_git) )'
-added_style = "fg:color_git_added"
-deleted_style = "fg:color_git_deleted"
+added_style = "fg:green"
+deleted_style = "fg:red"
 only_nonzero_diffs = true
 disabled = false
 
