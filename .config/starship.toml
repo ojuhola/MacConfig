@@ -109,7 +109,7 @@ show_always = true
 
 [hostname]
 ssh_symbol = " "
-format = "[$hostname](bold blue) [$ssh_symbol](bold white)"
+format = "[$hostname](bold blue) [$ssh_symbol](bright-white)"
 ssh_only = false
 
 [character]
@@ -138,7 +138,7 @@ time_format = "%H:%M:%S"
 
 [cmd_duration]
 min_time = 1000
-#format = " [$duration]($style) "
+# format = " [$duration]($style) "
 
 [git_commit]
 format = "( [($tag)(@$hash)]($style) )"
