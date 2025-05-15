@@ -104,11 +104,7 @@ symbol = " "
 disabled = false
 
 [username]
-# format = " [$user](blue)@"
-# format = " [$user](blue)@
 format = "[$user](blue)@"
-# format = " [$user](blue)@"
-# format = " [$user](blue)@"
 show_always = true
 
 [hostname]
@@ -123,12 +119,27 @@ error_symbol = "[➜](bold red)"
 [directory]
 read_only = " 🔒"
 read_only_style = "white"
+truncation_length = 3
 truncation_symbol = "../"
+truncate_to_repo = true
+
+[directory.substitutions]
+"Documents" = "󰈙 "
+"Downloads" = " "
+"Music" = "󰝚 "
+"Pictures" = " "
+"Videos" = "󰲋 "
 
 [cmd_duration]
 min_time = 1000
 
 [git_metrics]
+disabled = false
+
+[git_status]
+format = '($all_status $ahead_behind)'
+
+[battery]
 disabled = false
 
 [aws]
