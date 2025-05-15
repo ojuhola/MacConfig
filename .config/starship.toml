@@ -2,7 +2,9 @@
 # My custom starship prompt configration
 # OP 24.05.2019
 
+# Two lines prompt 
 format = """
+$os\
 $username\
 $hostname\
 $directory\
@@ -12,29 +14,107 @@ $git_status\
 $git_metrics\
 $fill\
 $cmd_duration\
-$lua\
-$python\
+$localip\
+$shlvl\
+$singularity\
+$kubernetes\
+$vcsh\
+$fossil_branch\
+$fossil_metrics\
+$hg_branch\
+$pijul_channel\
+$docker_context\
+$package\
+$c\
+$cmake\
+$cobol\
+$daml\
+$dart\
+$deno\
+$dotnet\
+$elixir\
+$elm\
+$erlang\
+$fennel\
+$gleam\
+$golang\
+$guix_shell\
 $haskell\
-$php\
-$ruby\
+$haxe\
+$helm\
+$java\
+$julia\
+$kotlin\
+$gradle\
+$lua\
+$nim\
 $nodejs\
+$ocaml\
+$opa\
+$perl\
+$php\
+$pulumi\
+$purescript\
+$python\
+$quarto\
+$raku\
+$rlang\
+$red\
+$ruby\
+$rust\
+$scala\
+$solidity\
+$swift\
+$terraform\
+$typst\
+$vlang\
+$vagrant\
+$zig\
+$buf\
+$nix_shell\
+$conda\
+$meson\
+$spack\
+$memory_usage\
+$aws\
+$gcloud\
+$openstack\
+$azure\
+$nats\
+$direnv\
+$env_var\
+$mise\
+$crystal\
+$custom\
+$sudo\
+$jobs\
+$battery\
+$time\
+$status\
+$container\
+$netns\
+$shell\
 $line_break\
 $character"""
 
 [fill]
 symbol = " "
 
+[os]
+disabled = false
+
 [username]
-format = " [$user](blue)@"
-# format = " [$user](blue)@"
+# format = " [$user](blue)@"
+# format = " [$user](blue)@
+format = "[$user](blue)@"
 # format = " [$user](blue)@"
 # format = " [$user](blue)@"
 show_always = true
 
 [hostname]
+ssh_symbol = " "
 format = "[$hostname](blue) $ssh_symbol"
 ssh_only = false
-
 
 [character]
 success_symbol = "[➜](bold green)"
@@ -51,33 +131,71 @@ min_time = 1000
 [git_metrics]
 disabled = false
 
-
 [aws]
 symbol = "  "
 
 [buf]
 symbol = " "
 
+[bun]
+symbol = " "
+
 [c]
 symbol = " "
+
+[cpp]
+symbol = " "
+
+[cmake]
+symbol = " "
 
 [conda]
 symbol = " "
 
+[crystal]
+symbol = " "
+
 [dart]
 symbol = " "
+
+[deno]
+symbol = " "
 
 [docker_context]
 symbol = " "
 
 [elixir]
-symbol = " "
+symbol = " "
 
 [elm]
 symbol = " "
 
+[fennel]
+symbol = " "
+
+[fossil_branch]
+symbol = " "
+
+[gcloud]
+symbol = "  "
+
+[git_branch]
+symbol = " "
+
+[git_commit]
+tag_symbol = '  '
+
+[golang]
+symbol = " "
+
+[guix_shell]
+symbol = " "
+
 [haskell]
 symbol = " "
+
+[haxe]
+symbol = " "
 
 [hg_branch]
 symbol = " "
@@ -88,17 +206,20 @@ symbol = " "
 [julia]
 symbol = " "
 
+[kotlin]
+symbol = " "
+
 [lua]
 symbol = " "
 
 [memory_usage]
-symbol = " "
+symbol = "󰍛 "
 
 [meson]
-symbol = "喝 "
+symbol = "󰔷 "
 
 [nim]
-symbol = " "
+symbol = "󰆥 "
 
 [nix_shell]
 symbol = " "
@@ -106,23 +227,91 @@ symbol = " "
 [nodejs]
 symbol = " "
 
+[ocaml]
+symbol = " "
+
+[os.symbols]
+Alpaquita = " "
+Alpine = " "
+AlmaLinux = " "
+Amazon = " "
+Android = " "
+Arch = " "
+Artix = " "
+CachyOS = " "
+CentOS = " "
+Debian = " "
+DragonFly = " "
+Emscripten = " "
+EndeavourOS = " "
+Fedora = " "
+FreeBSD = " "
+Garuda = "󰛓 "
+Gentoo = " "
+HardenedBSD = "󰞌 "
+Illumos = "󰈸 "
+Kali = " "
+Linux = " "
+Mabox = " "
+Macos = " "
+Manjaro = " "
+Mariner = " "
+MidnightBSD = " "
+Mint = " "
+NetBSD = " "
+NixOS = " "
+Nobara = " "
+OpenBSD = "󰈺 "
+openSUSE = " "
+OracleLinux = "󰌷 "
+Pop = " "
+Raspbian = " "
+Redhat = " "
+RedHatEnterprise = " "
+RockyLinux = " "
+Redox = "󰀘 "
+Solus = "󰠳 "
+SUSE = " "
+Ubuntu = " "
+Unknown = " "
+Void = " "
+Windows = "󰍲 "
+
 [package]
-symbol = " "
+symbol = "󰏗 "
+
+[perl]
+symbol = " "
+
+[php]
+symbol = " "
+
+[pijul_channel]
+symbol = " "
+
+[pixi]
+symbol = "󰏗 "
 
 [python]
 symbol = " "
 
 [rlang]
-symbol = "ﳒ "
+symbol = "󰟔 "
 
 [ruby]
 symbol = " "
 
 [rust]
-symbol = " "
+symbol = "󱘗 "
 
 [scala]
 symbol = " "
 
-[spack]
-symbol = "🅢 "
+[swift]
+symbol = " "
+
+[zig]
+symbol = " "
+
+[gradle]
+symbol = " "
