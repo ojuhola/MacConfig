@@ -134,12 +134,33 @@ time_format = "%H:%M:%S"
 
 [cmd_duration]
 min_time = 1000
+# format = " [$duration]($style) "
 
-[git_metrics]
+[git_commit]
+format = "( [($tag)(@$hash)]($style) )"
+commit_hash_length = 7
+only_detached = true
+tag_symbol = "󰓼 "
+tag_disabled = false
 disabled = false
 
 [git_status]
-format = '($all_status $ahead_behind)'
+style = "fg:color_git"
+format = '([$ahead_behind]($style) )([$all_status]($style) )'
+stashed = "*${count}"
+ahead = "⇡${count}"
+behind = "⇣${count}"
+up_to_date = ""
+diverged = "⇡${ahead_count}⇣${behind_count}"
+conflicted = "=${count}"
+deleted = "×${count}"
+renamed = "»${count}"
+modified = "!${count}"
+staged = "+${count}"
+untracked = "?${count}"
+ignore_submodules = false
+disabled = false
+
 
 [battery]
 disabled = true
@@ -195,8 +216,7 @@ symbol = "  "
 [git_branch]
 symbol = " "
 
-[git_commit]
-tag_symbol = '  '
+
 
 [golang]
 symbol = " "
