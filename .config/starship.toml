@@ -108,7 +108,7 @@ format = "[$user](blue)@"
 show_always = true
 
 [hostname]
-#ssh_symbol = " "
+ssh_symbol = " "
 format = "[$hostname](blue) [$ssh_symbol](bright-white)"
 ssh_only = false
 
