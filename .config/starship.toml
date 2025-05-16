@@ -119,7 +119,7 @@ error_symbol = "[➜](bold red)"
 [directory]
 read_only = " 🔒"
 read_only_style = "white"
-truncation_length = 4 
+truncation_length = 3 
 truncation_symbol = "../"
 truncate_to_repo = true
 
@@ -134,12 +134,16 @@ truncate_to_repo = true
 
 [time]
 disabled = false
+style = "fg:white"
 format = " [$time]($style) "
 time_format = "%H:%M:%S"
 
 [cmd_duration]
+disabled = false
 min_time = 1000
+style = "fg:white"
 #format = " [$duration]($style) "
+format = "[$duration]($style) "
 
 [git_commit]
 format = "( [($tag)(@$hash)]($style) )"
