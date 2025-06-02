@@ -50,7 +50,7 @@ alias g.discard="git reset --hard; git clean -df"
 
 # Function to add and commit changes with a message
 # Usage: gacp "Your commit message"
-function gacp
+function g.acp
     set -l message (string join " " $argv)
     if test -z "$message"
         echo "Error: Please provide a commit message."
