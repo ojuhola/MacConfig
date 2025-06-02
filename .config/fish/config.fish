@@ -58,6 +58,7 @@ function gacp
     end
     git add --all
     git commit -m "$message"
+    git push
 end
 
 # Suppress the default fish greeting
