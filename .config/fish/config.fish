@@ -40,7 +40,7 @@ alias mv="mv -i"
 alias cp="cp -i"
 alias rmdir="rmdir -i"
 
-# Git aliases for common operations
+# Git aliases 
 alias g="git"
 alias gs="git status -s"
 alias g.log="git log --oneline --decorate --graph --color=always"
@@ -48,6 +48,17 @@ alias g.lastcommit="git for-each-ref --sort=-committerdate refs/heads/ --format=
      - %(color:red)%(objectname:short)%(color:reset) - %(contents:subject) - %(authorname) (%(color:green)%(committerdate:relative)%(color:reset))'"
 alias g.discard="git reset --hard; git clean -df"
 
+# Function to add and commit changes with a message
+# Usage: gacp "Your commit message"
+function gacp
+    set -l message (string join " " $argv)
+    if test -z "$message"
+        echo "Error: Please provide a commit message."
+        return 1
+    end
+    git add --all
+    git commit -m "$message"
+end
 
 # Suppress the default fish greeting
 set -g fish_greeting
