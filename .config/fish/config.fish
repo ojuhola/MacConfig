@@ -25,6 +25,8 @@ if type -q eza
     alias lt="eza -la --icons --no-user  --color=always --group-directories-first -T -D --git-ignore"
 end
 
+
+
 # Aliases for common commands
 alias update="brew update --quiet && brew upgrade --greedy --quiet && brew cleanup --quiet && echo -e '==> Done'"
 alias cat="bat --style=plain --color=always"
@@ -37,6 +39,13 @@ alias rm="rm -i"
 alias mv="mv -i"
 alias cp="cp -i"
 alias rmdir="rmdir -i"
+
+# Git aliases for common operations
+alias g="git"
+alias gitreset="git reset --hard; git clean -df"
+alias gitrstatus="git for-each-ref --sort=-committerdate refs/heads/ --format='%(HEAD) %(color:yellow)%(refname:short)%(color:reset) \
+     - %(color:red)%(objectname:short)%(color:reset) - %(contents:subject) - %(authorname) \ 
+     (%(color:green)%(committerdate:relative)%(color:reset))'"
 
 # Suppress the default fish greeting
 set -g fish_greeting
