@@ -43,10 +43,10 @@ alias rmdir="rmdir -i"
 # Git aliases for common operations
 alias g="git"
 alias gs="git status -s"
-alias g.discard="git reset --hard; git clean -df"
+alias g.log="git log --oneline --decorate --graph --color=always"
 alias g.lastcommit="git for-each-ref --sort=-committerdate refs/heads/ --format='%(HEAD) %(color:yellow)%(refname:short)%(color:reset) \
-     - %(color:red)%(objectname:short)%(color:reset) - %(contents:subject) - %(authorname) \ 
-     (%(color:green)%(committerdate:relative)%(color:reset))'"
+     - %(color:red)%(objectname:short)%(color:reset) - %(contents:subject) - %(authorname) (%(color:green)%(committerdate:relative)%(color:reset))'"
+alias g.discard="git reset --hard; git clean -df"
 
 
 # Suppress the default fish greeting
