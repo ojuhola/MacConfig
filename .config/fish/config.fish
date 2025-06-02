@@ -43,6 +43,8 @@ alias rmdir="rmdir -i"
 # Git aliases 
 alias g="git"
 alias gs="git status -s"
+alias g.p="git pull"
+alias g.f="git fetch"
 alias g.log="git log --oneline --decorate --graph --color=always"
 alias g.lastcommit="git for-each-ref --sort=-committerdate refs/heads/ --format='%(HEAD) %(color:yellow)%(refname:short)%(color:reset) \
      - %(color:red)%(objectname:short)%(color:reset) - %(contents:subject) - %(authorname) (%(color:green)%(committerdate:relative)%(color:reset))'"
@@ -60,7 +62,6 @@ function g.acp
     git commit -m "$message"
     git push
 end
-
 # Suppress the default fish greeting
 set -g fish_greeting
 
