@@ -39,11 +39,11 @@ switch (uname)
         else
             # Generic Linux fallback
             echo "Unknown Linux distribution"
-            alias update="echo 'Please configure update command for your distribution'"
+            alias update="echo 'Unknown OS, only partial configurations applied.'"
         end
     # case '*Microsoft*'
     case '*'   # Unknown OS
-        echo "Error: Unknown OS, only partial configurations applied."
+        echo "Unknown OS, only partial configurations applied."
 end
 
 # Aliases for file operations with confirmation
