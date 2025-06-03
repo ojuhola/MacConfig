@@ -15,9 +15,8 @@ set -g fish_greeting
 
 # Function for reloading fish config when needed
 function reload
-    exec fish
     set -l config (status -f)
-    echo "reloading: $config"
+    source $config
 end
 
 switch (uname)
@@ -25,8 +24,7 @@ switch (uname)
         # Aliases for updating the system
         alias update="brew update --quiet && brew upgrade --greedy --quiet && \
             brew cleanup --quiet && echo -e '==> Done'" 
-
-        case Linux
+    case Linux
         # Check for specific Linux distribution
         if test -f /etc/arch-release
             # Arch Linux specific aliases
@@ -38,12 +36,10 @@ switch (uname)
             alias upall="sudo apt dist-upgrade -y && sudo apt autoremove -y"
         else
             # Generic Linux fallback
-            echo "Unknown Linux distribution"
-            alias update="echo 'Unknown OS, only partial configurations applied.'"
+            echo "Unknown Linux distribution, only partial configuration applied."
         end
-    # case '*Microsoft*'
     case '*'   # Unknown OS
-        echo "Unknown OS, only partial configurations applied."
+        echo "Unknown OS, only partial configuration applied."
 end
 
 # Aliases for file operations with confirmation
@@ -84,7 +80,7 @@ if command -sq bat
     alias cat="bat --style=plain --color=always"
 end
 
-# Replace ls-command with eza for directory listings
+# Replace ls-command with eza 
 if command -sq eza
     alias l="eza -1 --icons --no-user --color=always --group-directories-first --git-ignore"
     alias ls="eza -l --icons --no-user --color=always --group-directories-first --git-ignore"
