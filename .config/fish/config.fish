@@ -10,6 +10,9 @@ if not status --is-interactive
     exit
 end
 
+# Suppress the default fish greeting
+set -g fish_greeting
+
 # Function for reloading fish config when needed
 function reload
     exec fish
@@ -17,16 +20,68 @@ function reload
     echo "reloading: $config"
 end
 
-# Function to add and commit changes with a message
-function g.all
-    set -l message (string join " " $argv)
-    if test -z "$message"
-        echo "Error: Please provide a commit message."
-        return 1
+switch (uname)
+    case Darwin   # macOS
+        # Aliases for updating the system
+        alias update="brew update --quiet && brew upgrade --greedy --quiet && \
+            brew cleanup --quiet && echo -e '==> Done'" 
+
+        case Linux
+        # Check for specific Linux distribution
+        if test -f /etc/arch-release
+            # Arch Linux specific aliases
+            alias update="sudo pacman -Syyu --color auto"
+            alias upall="$HOME/.config/waybar/scripts/news_upd.py"
+        else if test -f /etc/ubuntu-release -o -f /etc/lsb-release
+            # Ubuntu specific aliases
+            alias update="sudo apt update && sudo apt upgrade -y"
+            alias upall="sudo apt dist-upgrade -y && sudo apt autoremove -y"
+        else
+            # Generic Linux fallback
+            echo "Unknown Linux distribution"
+            alias update="echo 'Please configure update command for your distribution'"
+        end
+    # case '*Microsoft*'
+    case '*'   # Unknown OS
+        echo "Error: Unknown OS, only partial configurations applied."
+end
+
+# Aliases for file operations with confirmation
+alias grep="grep --color=auto"
+alias ping="ping -c 5"
+alias mkdir="mkdir -p"
+alias rm="rm -i"
+alias mv="mv -i"
+alias cp="cp -i"
+alias rmdir="rmdir -i"
+
+# Git aliases 
+if command -sq git
+    alias g="git"
+    alias gs="git status -s"
+    alias g.p="git pull"
+    alias g.f="git fetch"
+    alias g.log="git log --oneline --decorate --graph --color=always"
+    alias g.lastcommit="git for-each-ref --sort=-committerdate refs/heads/ --format='%(HEAD) %(color:yellow)%(refname:short)%(color:reset) \
+     - %(color:red)%(objectname:short)%(color:reset) - %(contents:subject) - %(authorname) (%(color:green)%(committerdate:relative)%(color:reset))'"
+    alias g.discard="git reset --hard; git clean -df"
+
+    # Function to add and commit changes with a message
+    function g.all
+        set -l message (string join " " $argv)
+        if test -z "$message"
+            echo "Error: Please provide a commit message."
+            return 1
+        end
+        git add --all
+        git commit -m "$message"
+        git push
     end
-    git add --all
-    git commit -m "$message"
-    git push
+end
+
+# Nicer looking cat command
+if command -sq bat
+    alias cat="bat --style=plain --color=always"
 end
 
 # Replace ls-command with eza for directory listings
@@ -37,40 +92,12 @@ if command -sq eza
     alias lt="eza -la --icons --no-user  --color=always --group-directories-first -T -D --git-ignore"
 end
 
-# Aliases for common commands
-alias update="brew update --quiet && brew upgrade --greedy --quiet && brew cleanup --quiet && echo -e '==> Done'"
-alias cat="bat --style=plain --color=always"
-alias grep="grep --color=auto"
-alias ping="ping -c 5"
-alias mkdir="mkdir -p"
-
-# Aliases for file operations with confirmation
-alias rm="rm -i"
-alias mv="mv -i"
-alias cp="cp -i"
-alias rmdir="rmdir -i"
-
-# Git aliases 
-alias g="git"
-alias gs="git status -s"
-alias g.p="git pull"
-alias g.f="git fetch"
-alias g.log="git log --oneline --decorate --graph --color=always"
-alias g.lastcommit="git for-each-ref --sort=-committerdate refs/heads/ --format='%(HEAD) %(color:yellow)%(refname:short)%(color:reset) \
-     - %(color:red)%(objectname:short)%(color:reset) - %(contents:subject) - %(authorname) (%(color:green)%(committerdate:relative)%(color:reset))'"
-alias g.discard="git reset --hard; git clean -df"
-
-# Suppress the default fish greeting
-set -g fish_greeting
-
 # Starship prompt initialization
 if command -sq starship
     starship init fish | source
 end
 
-# Decorations at the beginning of the terminal session
-# Decorations at the beginning of the terminal session
+# Decorations at the beginning of the terminal session for easy identification
 if command -sq fastfetch
-    echo -e "\n"
     fastfetch
 end
