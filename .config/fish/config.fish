@@ -60,7 +60,7 @@ if command -sq git
      - %(color:red)%(objectname:short)%(color:reset) - %(contents:subject) - %(authorname) (%(color:green)%(committerdate:relative)%(color:reset))'"
     alias g.discard="git reset --hard; git clean -df"
 
-    # Function to add and commit changes with a message
+    # Function to add, commit, and push changes
     function g.all
         set -l message (string join " " $argv)
         if test -z "$message"
