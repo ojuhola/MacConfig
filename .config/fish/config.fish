@@ -19,6 +19,7 @@ function reload
     source $config
 end
 
+# Determine the operating system
 switch (uname)
     case Darwin   # macOS
         # Aliases for updating the system
@@ -26,19 +27,16 @@ switch (uname)
             brew cleanup --quiet && echo -e '==> Done'" 
     case Linux
         # Check for specific Linux distribution
-        if test -f /etc/arch-release
-            # Arch Linux specific aliases
+        if test -f /etc/arch-release   # Arch Linux
             alias update="sudo pacman -Syyu --color auto"
             alias upall="$HOME/.config/waybar/scripts/news_upd.py"
-        else if test -f /etc/ubuntu-release -o -f /etc/lsb-release
-            # Ubuntu specific aliases
-            alias update="sudo apt update && sudo apt upgrade -y"
-            alias upall="sudo apt dist-upgrade -y && sudo apt autoremove -y"
+        else if test -f /etc/ubuntu-release -o -f /etc/lsb-release    # Ubuntu
+            alias update="sudo apt update && sudo apt upgrade -y && sudo apt autoremove -y"
+            alias upall="sudo apt update && sudo apt full-upgrade -y && sudo apt autoremove -y && sudo snap refresh"
         else
-            # Generic Linux fallback
             echo "Unknown Linux distribution, only partial configuration applied."
         end
-    case '*'   # Unknown OS
+    case '*'
         echo "Unknown OS, only partial configuration applied."
 end
 
