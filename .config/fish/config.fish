@@ -30,7 +30,7 @@ function g.all
 end
 
 # Replace ls-command with eza for directory listings
-if type -q eza
+if command -sq eza
     alias l="eza -1 --icons --no-user --color=always --group-directories-first --git-ignore"
     alias ls="eza -l --icons --no-user --color=always --group-directories-first --git-ignore"
     alias ll="eza -la --icons --no-user --color=always --group-directories-first --git-ignore --time-style='+%d.%m.%y %H:%M'"
@@ -69,5 +69,8 @@ if command -sq starship
 end
 
 # Decorations at the beginning of the terminal session
-echo -e "\n"
-fastfetch
+# Decorations at the beginning of the terminal session
+if command -sq fastfetch
+    echo -e "\n"
+    fastfetch
+end
