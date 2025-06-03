@@ -1,6 +1,9 @@
-# starship.toml
+################################################################################
 # My custom starship prompt configration
-# OP 24.05.2019
+# 
+#
+# 02.04.2024 OP
+################################################################################
 
 # Get editor completions based on the config schema
 "$schema" = 'https://starship.rs/config-schema.json'
@@ -120,14 +123,17 @@ error_symbol = "[➜](bold red)"
 read_only = " 🔒"
 read_only_style = "white"
 truncation_length = 3 
-truncation_symbol = "../"
+truncation_symbol = "…/"
+format = "[$path]($style)[$read_only]($read_only_style) "
 truncate_to_repo = true
+repo_root_style = "bold cyan"
+repo_root_format = "/($style)[$repo_root]($repo_root_style)[$path]($style) "
 
 [directory.substitutions]
 "Desktop" = " "
 "Documents" = "󰈙 "
 "Downloads" = " "
-"Git" = "󰊢 "
+"Git" = " "
 "Music" = "󰝚 "
 "Pictures" = " "
 "Movies" = " "

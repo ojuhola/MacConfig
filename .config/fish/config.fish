@@ -52,10 +52,10 @@ alias rmdir="rmdir -i"
 # Git aliases 
 if command -sq git
     alias g="git"
-    alias gs="git status -s"
+    alias g.s="git status -s"
     alias g.p="git pull"
     alias g.f="git fetch"
-    alias g.log="git log --oneline --decorate --graph --color=always"
+    alias g.lg="git log --oneline --decorate --graph --color=always"
     alias g.lc="git for-each-ref --sort=-committerdate refs/heads/ --format='%(HEAD) %(color:yellow)%(refname:short)%(color:reset) \
      - %(color:red)%(objectname:short)%(color:reset) - %(contents:subject) - %(authorname) (%(color:green)%(committerdate:relative)%(color:reset))'"
     alias g.discard="git reset --hard; git clean -df"
