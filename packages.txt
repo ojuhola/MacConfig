@@ -7,11 +7,15 @@ fish
 fzf
 libgit2
 libssh2
+lz4
+ncdu
 ncurses
 oniguruma
 openssl@3
 pcre2
 starship
+xz
+zstd
 font-meslo-lg-nerd-font
 iterm2
 visual-studio-code
